@@ -26,13 +26,34 @@ function check(id)
     {
         if(id===winCondition)
          {
+            
           buns[id].style.backgroundColor="green";
           gameend = true;
+            let temp=i;
+            buns[id].value="O";
+        //   alert("Congrats you won in "+(temp+=1)+" attempts");
           }
        else
         {
         buns[id].style.backgroundColor="red";
+        buns[id].value="X";
            }
+    i++;
+    attempt.textContent="Attempts:"+i;//attempts updated
+    }
+
+}
+}
+
+
+function prompter()
+{
+     var a=prompt("Enter your name");
+     
+     players.textContent+=a;//name added to para 
+     
+}
+
     i++;
     attempt.textContent="Attempts:"+i;//attempts updated
     }
